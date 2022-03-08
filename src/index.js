@@ -8,6 +8,10 @@ app.set("port", process.env.PORT || 5000);
 app.use(express.json());
 
 // Routes
+app.get("/api/", (req, res) => {
+  res.send("Hello World");
+});
+
 app.use("/api/users", require("./routes/users"));
 
 // Server
